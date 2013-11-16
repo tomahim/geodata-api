@@ -1,0 +1,14 @@
+div#content.edit-page
+	div#main.add-city
+		h2 City add
+		message(timeout="5000" close="true")
+
+		div#searchCity
+			form(id="searchCityForm" name="searchForm" ng-submit="searchCity(searchForm)")
+				input(type="text" ng-model="search.cityName" class="city" placeholder="City")
+				input(type="submit" value="Chercher")
+			leaflet(ng-show="markers != null" width='640' bounds="gmaps_bounds" center="center" markers="markers"  height='480')
+		
+		include ../elements/edit-form-city
+
+		div.clearer

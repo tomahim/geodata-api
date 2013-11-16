@@ -1,0 +1,21 @@
+div#editDetails(ng-show="countryToSave")
+	h3 Données trouvées
+	form(id="countryDetailsForm" name="countryDetails" ng-submit="saveCountry()" method="POST")
+		label(for="name") Name
+		input(id="name" type="text" ng-model="countryToSave.name")
+		label(for="name_url") Name url
+		input(id="name_url" type="text" ng-model="countryToSave.name_url")
+		label(for="lat") Latitude
+		input(id="lat" type="text" ng-model="countryToSave.lat")
+		label(for="lng") Longitude
+		input(id="lng" type="text" ng-model="countryToSave.lng")
+		label(for="zoom") Zoom
+		input(id="zoom" type="number" min="0" ng-model="countryToSave.zoom")
+
+		div.notfound(ng-show="countryToSave && countryToSave.gmaps_types == undefined") gmaps_types non trouvé
+		div.notfound(ng-show="countryToSave && countryToSave.gmaps_bounds == undefined") gmaps_bounds non trouvé
+		div.notfound(ng-show="countryToSave && countryToSave.gmaps_viewport == undefined") gmaps_viewport non trouvé
+		div.notfound(ng-show="countryToSave && countryToSave.gmaps_location_type == undefined") gmaps_location_type non trouvé
+
+		input(type="submit" ng-show="!alreadyInDb" value="Enregistrer")
+	div.clearer

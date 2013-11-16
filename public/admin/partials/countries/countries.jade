@@ -1,0 +1,8 @@
+div#content.countries
+	h2 Manage countries
+	message(timeout="5000" close="true")
+	div.maplist(ng-init="init()")
+		div.grid(ng-grid="gridContent")
+	div.mapviewer
+		leaflet(width='600', bounds="bounds" center="center" height='480', geojson="geojson", id='map')
+	div.clearer

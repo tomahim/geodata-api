@@ -1,0 +1,45 @@
+{ "services": 
+	[
+        { 
+        	"serviceName" : "CityService", 
+        	"routes" : [
+        		{"method" : "GET", "callback" : "findAll", "url" : "/cities"},
+			{"method" : "GET", "callback" : "findById", "url" : "/cityById/:cityId"},
+                        {"method" : "GET", "callback" : "findByName", "url" : "/city/:name"},
+                        {"method" : "GET", "callback" : "cityData", "url" : "/cityData/:name"},
+                        {"method" : "POST", "callback" : "saveCity", "url" : "/saveCity"},
+                        {"method" : "POST", "callback" : "updateCity", "url" : "/updateCity"},                      
+                        {"method" : "GET", "callback" : "initCapitals", "url" : "/cities/initCapitals"},
+                        {"method" : "GET", "callback" : "firstImport", "url" : "/cities/firstImport"},
+                        {"method" : "GET", "callback" : "saveGMapsInfos", "url" : "/citySaveGmapsInfos"},
+                        {"method" : "GET", "callback" : "importCities", "url" : "/importCities/:type"}                        
+        	]
+        },
+        { 
+                "serviceName" : "StatsService", 
+                "routes" : [
+                        {"method" : "GET", "callback" : "getCityRepartition", "url" : "/stats/cityRepartition/:limit"},
+                        {"method" : "GET", "callback" : "getSizeDbData", "url" : "/stats/sizeDbData"}
+                ]
+        },
+        { 
+        	"serviceName" : "GoogleMapsService", 
+        	"routes" : [
+        		{"method" : "GET", "callback" : "adressPosition", "url" : "/adressPosition/:adress"},
+			{"method" : "GET", "callback" : "reversePosition", "url" : "/reversePosition/:lng/:lat"}
+        	]
+        },
+        { 
+                "serviceName" : "CountryService", 
+                "routes" : [
+                        {"method" : "GET", "callback" : "getAllCountries", "url" : "/countries"},
+                        {"method" : "GET", "callback" : "getCountryByName", "url" : "/country/:name"},
+                        {"method" : "POST", "callback" : "updateCountry", "url" : "/updateCountry"},
+                        {"method" : "GET", "callback" : "findById", "url" : "/countryById/:countryId"},
+                        {"method" : "GET", "callback" : "firstImport", "url" : "/countries/firstImport"},
+                        {"method" : "GET", "callback" : "saveGMapsInfos", "url" : "/countrySaveGmapsInfos/:name"},
+                        {"method" : "GET", "callback" : "renameFlagsFiles", "url" : "/renameFlagsFiles"}
+                ]
+        } 
+	] 
+}	

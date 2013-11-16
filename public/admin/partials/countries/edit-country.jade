@@ -1,0 +1,11 @@
+div#content.edit-page.edit-country(ng-init="init()")
+	div#main.add-country
+		h2 Country edit : {{countryToSave.name}}
+		message(timeout="5000" close="true")
+
+		div#countryToEdit
+			leaflet(width='640' bounds="gmaps_bounds" center="center" markers="markers" geojson="geojson" height='480')
+		
+		include ../elements/edit-form-country
+
+		div.clearer

@@ -1,0 +1,11 @@
+div#content.edit-page(ng-init="init()")
+	div#main.add-city
+		h2 City edit : {{cityToSave.name}}
+		message(timeout="4000" close="true")
+
+		div#searchCity
+			leaflet(ng-show="markers != null" width='640' bounds="gmaps_bounds" center="center" markers="markers"  height='480')
+		
+		include ../elements/edit-form-city
+
+		div.clearer

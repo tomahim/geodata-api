@@ -1,0 +1,8 @@
+.gallery .image {
+	float:left;
+	margin-right:15px;
+}
+
+.selected {
+	background-color: gray;
+}

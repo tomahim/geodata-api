@@ -1,0 +1,12 @@
+div(style="float:left" ng-init="init()")
+	div(ng-repeat="city in cities | orderBy:orderCondition")
+		div(ng-click="selectCity(city)") 
+			{{city.iso_id}} {{city.name}} 
+			div(style ="color:red;" ng-show="!city.lat && !city.lng") 
+				div not ok
+		a(href="#/edit-city/{{city._id}}") Edit
+div(style="float:left")
+	leaflet(width='640', bounds="bounds", center="center", markers="markers", height='480', geoJson="geoJson", id='map')
+	div 
+		textarea(col="70" row="70") {{markers}}
+		textarea(col="70" row="70") {{bounds}}

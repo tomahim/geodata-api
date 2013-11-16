@@ -1,0 +1,20 @@
+{
+  "name": "AngularDev",
+  "version": "1.0.0",
+  "description": "Angular Dev",
+  "dependencies": {
+    "express": "latest",
+    "jade": "latest",
+    "mongoose": "latest",
+    "broadway": "~0.2.7",
+    "googlemaps": "~0.1.9",
+    "geocoder": "~0.1.0",
+    "async": "~0.2.9",
+    "request": "~2.27.0",
+    "async-waterfall": "~0.1.5"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "author": "tomabolt"
+}

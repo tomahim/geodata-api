@@ -1,0 +1,15 @@
+div#content.cities
+	h2 Manage cities	
+	a(href="#add-city" class="add-link") Add a city
+	div.clearer
+	message(timeout="4000" close="true")
+	div.filters
+		input(type="text" placeholder="Country" ng-model="countrySearch")
+		input(type="text" placeholder="City" ng-model="citySearch")
+		input(type="reset" value="Reset search" ng-click="resetSearch()")
+	div.clearer
+	div.maplist(ng-init="init()")
+		div.grid(ng-grid="gridContent")
+	div.mapviewer
+		leaflet(width="600", bounds="bounds" center="center" markers="markers" height="480", geojson="geojson", id="map")
+	div.clearer

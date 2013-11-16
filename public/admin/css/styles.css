@@ -1,0 +1,279 @@
+body {
+	font: 14px "DejaVu Sans Condensed", 
+				"Liberation Sans", "Nimbus Sans L", 
+				Tahoma, Geneva, "Helvetica Neue", 
+				Helvetica, Arial, sans serif;
+}
+
+h2 {
+	font-size:22px;
+	margin:0 0 15px 18px;
+}
+
+h3 {
+	font-size:18px;
+}
+
+#navbar {
+	background-color:#ececec;
+	padding:10px;
+	border-bottom:1px solid #acaaaa;
+	position:fixed;
+	width:100%;
+	z-index:100;
+}
+
+#navbar h1 {
+	font-size:22px;
+}
+
+#navbar h1 a {
+	text-decoration:none;
+	color:#5f5e5e;
+}
+
+#navbar a {	
+	color: #777777;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #ffffff;
+}
+
+#navbar li a:hover {
+	text-decoration:underline;	
+}
+
+#navbar li a.active {
+	font-weight: bold;
+}
+
+#navbar ul {	
+	padding-top:7px;
+}
+
+#navbar ul li {	
+	margin-left: 20px;
+}
+
+#navbar h1, #navbar ul, #navbar ul li {
+	float:left;
+}
+
+.clearer {
+	clear:both;
+}
+
+#wrapper {
+	position:relative;
+	padding-top:70px;
+}
+
+#content {
+	margin:0 auto;
+	width:95%;
+}
+
+.maplist {
+	float:left;
+	width:50%;
+	margin-left:20px;
+	height:480px;
+}
+
+.mapviewer {
+	float:left;
+	margin-left:20px;
+}
+
+.ngGrid {
+	height: 100%;
+}
+
+.special-field {
+	padding:5px 0 0 5px;
+}
+
+.special-field a {
+	color:#2a6496;
+}
+
+.special-field img, .special-field .country-id {
+	float:left;
+}
+
+.special-field .country-id {
+	padding:4px 0 0 10px;
+}
+
+.filters {
+	margin-left: 20px;
+}
+
+.filters input {
+	margin:0 10px 10px 0;
+}
+
+#content.cities h2, #content.cities a.add-link {
+	float:left;
+}
+
+#content.cities a.add-link {
+	padding:7px 0 0 20px;
+}
+
+/***** ALERT *****/
+
+.alert
+{
+    padding:8px 35px 8px 14px;
+    margin-bottom:20px;
+    text-shadow:0 1px 0 rgba(255,255,255,0.5);
+    background-color:#fcf8e3;
+    border:1px solid #fbeed5;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px
+}
+#user-profil .alert {
+    margin-bottom:10px;
+}
+.alert,.alert h4
+{
+    color:#c09853
+}
+.alert h4
+{
+    margin:0
+}
+.alert .close
+{
+    position:relative;
+    top:-2px;
+	right: 5px;
+    line-height:20px
+}
+.alert-success
+{
+    color:#468847;
+    background-color:#dff0d8;
+    border-color:#d6e9c6
+}
+.alert-success h4
+{
+    color:#468847
+}
+.alert-danger,.alert-error
+{
+    color:#b94a48;
+    background-color:#f2dede;
+    border-color:#eed3d7
+}
+.alert-danger h4,.alert-error h4
+{
+    color:#b94a48
+}
+.alert-info
+{
+    color:#3a87ad;
+    background-color:#d9edf7;
+    border-color:#bce8f1
+}
+.alert-info h4
+{
+    color:#3a87ad
+}
+.alert-block
+{
+    padding-top:14px;
+    padding-bottom:14px
+}
+.alert-block>p,.alert-block>ul
+{
+    margin-bottom:0
+}
+.alert-block p+p
+{
+    margin-top:5px
+}
+
+/*** edit-page ***/
+
+#content.edit-page {
+	margin:0 auto;
+}
+
+#content.edit-page input {
+	height:35px;
+	font-size:18px;
+}
+
+#content.edit-page input[type=submit] {
+	width:90px
+}
+
+#content.edit-page #editDetails input[type=submit] {
+	width:auto;
+	float:right;
+}
+
+#searchCity, #editDetails, #countryToEdit {
+	float:left;
+}
+
+#editDetails {
+	width:300px;
+	margin: 50px 0 0 16px;
+	padding: 25px;
+	background-color:#5cde93;
+	height: auto;
+	font-size:16px;
+}
+
+#editDetails input, #editDetails label, #editDetails div.notfound {
+	display:block;
+}
+
+#editDetails h3, #editDetails input {
+	margin-bottom:20px;
+}
+
+#editDetails input {
+	width:100%;
+}
+
+#editDetails div.notfound {
+	font-size:18px;
+}
+
+#searchCity input.city, #countryToEdit input.city {
+	width:550px;
+	margin-bottom:15px;
+}
+
+div#main.edit-page {
+	margin:0 auto;
+	position:relative;
+	width:80%;
+}
+
+/*** DASHBOARD ***/
+.chart rect {
+  fill: none;
+}
+
+.chart rect:hover
+{
+	opacity: 0.8;
+	border:1px solid black;
+	cursor:pointer;
+}
+
+.chart text:hover {
+	font-weight:bold;
+}
+
+
+.chart text {
+  fill: white;
+  font: 15px sans-serif;
+  text-anchor: end;
+}
